@@ -9,5 +9,11 @@ module.exports = function(sequelize, DataTypes) {
       }
     }
   });
+
+  Post.associate = function(models) {
+    Post.belongsTo(models.User);
+    Post.hasMany(models.Item);
+  };
+  
   return Post;
 };
