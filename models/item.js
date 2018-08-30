@@ -7,7 +7,7 @@ module.exports = function(sequelize, DataTypes) {
     photoUrl: DataTypes.STRING
   });
 
-  Post.associate = function(models) {
+  Item.associate = function(models) {
     Item.belongsTo(models.Post);
   };
 
