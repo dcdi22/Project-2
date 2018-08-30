@@ -1,3 +1,108 @@
+/* For Sticky Footer */
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/* Font For Logo */
+.LogoFont,
+nav .brand-logo {
+  font-family: 'Oleo Script', cursive;
+}
+
+nav .brand-logo {
+  padding-left: 15px;
+}
+
 .list-group-item {
   line-height: 2.5;
+}
+
+/* Carousel */
+.carousel {
+  height: 70vh !important;
+}
+
+.carousel.carousel-slider .carousel-fixed-item {
+  bottom: 30vh !important;
+}
+
+.carousel-item {
+  background-size: cover;
+  background-position: top;
+}
+
+.c1 {
+  background-image: url('../Img/style6.jpg');
+}
+
+.c2 {
+  background-image: url('../Img/style13.jpg');
+}
+
+.c3 {
+  background-image: url('../Img/style2.jpg');
+}
+
+.c4 {
+  background-image: url('../Img/style30.jpg');
+}
+
+.c5 {
+  background-image: url('../Img/style4.jpg');
+}
+
+.c6 {
+  background-image: url('../Img/style5.jpg');
+}
+
+.c7 {
+  background-image: url('../Img/style22.jpg');
+}
+
+.c8 {
+  background-image: url('../Img/style7.jpg');
+}
+
+.c9 {
+  background-image: url('../Img/style26.jpeg');
+}
+
+/* Logo Shadow */
+.ugh {
+  text-shadow: 6px 3px 8px rgba(68, 68, 68, 0.76);
+}
+
+/* Modal */
+#modal1 {
+  overflow-y: hidden;
+}
+
+.loginMain {
+  color: #808080;
+}
+
+.modal {
+  height: 410px;
+  width: 400px;
+}
+
+/* Footer */
+.page-footer {
+  color: black !important;
+  background-color: rgb(247, 246, 241);
+}
+
+/* dash css */
+.mainBody {
+  margin-top: 25px;
+}
+
+.cardMain {
+  cursor: pointer;
 }
