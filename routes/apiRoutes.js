@@ -1,7 +1,7 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  // Get all examples
+  // Test POST request for creating a new Post
   app.post("/api/post", function(req, res) {
     db.Post.create(req.body)
       .catch(function(err) {
