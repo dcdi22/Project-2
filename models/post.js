@@ -14,6 +14,6 @@ module.exports = function(sequelize, DataTypes) {
     Post.belongsTo(models.User);
     Post.hasMany(models.Item);
   };
-  
+
   return Post;
 };
