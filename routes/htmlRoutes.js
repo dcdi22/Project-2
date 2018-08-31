@@ -24,7 +24,17 @@ module.exports = function(app) {
   // Load new-user page
   app.get("/new-user", function(req, res) {
     db.Example.findAll({}).then(function(dbExamples) {
-      res.render("createAcc", {
+      res.render("newAcc", {
+        msg: "Welcome!",
+        examples: dbExamples
+      });
+    });
+  });
+
+  // Load new-user page
+  app.get("/new-post", function(req, res) {
+    db.Example.findAll({}).then(function(dbExamples) {
+      res.render("post", {
         msg: "Welcome!",
         examples: dbExamples
       });
