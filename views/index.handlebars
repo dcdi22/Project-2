@@ -1,33 +1,141 @@
-<div id="home">
-  <div class="container">
-    <div class="row">
-      <div class="col-8 offset-2">
-        <h1>{{msg}}</h1>
-        <h2>This is our Home Page!</h2>
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
+<!-- Start of Nav -->
+  <ul id="styles" class="dropdown-content">
+    <li><a href="#!">Browse All</a></li>
+    <li class="divider"></li>
+    <li><a href="#!">Browse Popular</a></li>
+  </ul>
+  <ul id="pieces" class="dropdown-content">
+    <li><a href="#!">Shirts</a></li>
+    <li class="divider"></li>
+    <li><a href="#!">Pants</a></li>
+    <li class="divider"></li>
+    <li><a href="#!">Shoes</a></li>
+    <li class="divider"></li>
+    <li><a href="#!">Suits and Tuxedos</a></li>
+    <li class="divider"></li>
+    <li><a href="#!">Bags</a></li>
+    <li class="divider"></li>
+    <li><a href="#!">Accessories</a></li>
+  </ul>
+  <nav class="">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Marcus's Logo</a>
+      <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li>
+          <div class="center row">
+            <div class="col s12 ">
+              <div class="row" id="topbarsearch">
+                <div class="input-field col s6 s12 black-text">
+                  <i class="white-text material-icons prefix">search</i>
+                  <input type="text" placeholder="search" id="autocomplete-input" class="autocomplete white-text">
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
+        </li>
+        <li><a href="#home">Home</a></li>
+        <li><a class="dropdown-button" href="#!" data-activates="styles">Styles<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a class="dropdown-button" href="#!" data-activates="pieces">Pieces<i class="material-icons right">arrow_drop_down</i></a></li>
+      </ul>
+    </div>
+  </nav>
+  <ul class="side-nav" id="slide-out">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Styles</a></li>
+    <li><a href="#">Pieces</a></li>
+  </ul>
+  <!-- End of Nav -->
+
+
+
+  <!-- Carousel -->
+  <div class="carousel carousel-slider">
+    <div class="carousel-fixed-item center">
+      <div class="container white-text ugh">
+        <h2 class="LogoFont">SoulSelections</h2>
+        <p>A Social Marketplace For Fashion</p>
+      </div>
+      <a class="btn waves-effect white grey-text darken-text-2 modal-trigger z-depth-3" data-target="modal1">Login</a>
+      <br>
+      <br>
+      <a class="btn waves-effect white grey-text darken-text-2 z-depth-3" href="dash.html">Continue As Guest</a>
+    </div>
+    <a class="carousel-item c1" href="#one!"></a>
+    <a class="carousel-item c2" href="#two!"></a>
+    <a class="carousel-item c3" href="#three!"></a>
+    <a class="carousel-item c4" href="#four!"></a>
+    <a class="carousel-item c5" href="#five!"></a>
+    <a class="carousel-item c6" href="#six!"></a>
+    <a class="carousel-item c7" href="#seven!"></a>
+    <a class="carousel-item c8" href="#eight!"></a>
+    <a class="carousel-item c9" href="#nine!"></a>
+  </div>
+
+
+  <!-- Modal -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <div class="row">
+        <h4 class="center loginMain">Please, login into your account</h4>
+        <form class="col s12" action="dash.html" method="GET">
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="username" type="text" class="validate">
+              <label for="username">Username</label>
+            </div>
           </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="password" type="password" class="validate">
+              <label for="password">Password</label>
+            </div>
+          </div>
+          <div class='row'>
+            <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect blue lighten-3'>Login</button>
+          </div>
         </form>
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
+        <a href="createAcc.html"><p class="center">create account</p></a>
+        
       </div>
     </div>
   </div>
-</div>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
+  <!-- Footer -->
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class=" center">join our newsletter</h5>
+          <form action="#" method="GET">
+            <input type="email" name="emailNL" id="emailNL">
+            <button class="btn waves-effect blue lighten-3" type="submit" name="action">Submit
+              <i class="material-icons right">send</i>
+            </button>
+          </form>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <br>
+          <ul>
+            <li><a class=" text-lighten-3" href="#!">help</a></li>
+            <li><a class=" text-lighten-3" href="#!">about</a></li>
+            <li><a class=" text-lighten-3" href="#!">email us</a></li>
+            <li><a class=" text-lighten-3" href="#!">terms</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright black-text">
+      <div class="container center">
+        © 2018 Copyright
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <!-- INTIALIZATION -->
+  <script src="js/MatCss.js"></script>
