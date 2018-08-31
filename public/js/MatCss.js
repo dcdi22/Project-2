@@ -13,4 +13,12 @@ $(document).ready(function () {
     }, 4000);
 
     $('.modal').modal();
+
+    $(document).ready(function() {
+        Materialize.updateTextFields();
+      });
+    
+      $(document).ready(function(){
+        $('select').material_select();
+      });
 });
