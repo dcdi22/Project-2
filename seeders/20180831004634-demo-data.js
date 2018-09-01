@@ -239,10 +239,11 @@ module.exports = {
     ], {});
   },
 
-  down: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkDelete('Categories', null, {});
-    await queryInterface.bulkDelete('Items', null, {});
-    await queryInterface.bulkDelete('Posts', null, {});
-    await queryInterface.bulkDelete('Users', null, {});
-  }
+  // // This is creating errors with ESLint
+  // down: async (queryInterface, Sequelize) => {
+  //   await queryInterface.bulkDelete('Categories', null, {});
+  //   await queryInterface.bulkDelete('Items', null, {});
+  //   await queryInterface.bulkDelete('Posts', null, {});
+  //   await queryInterface.bulkDelete('Users', null, {});
+  // }
 };
