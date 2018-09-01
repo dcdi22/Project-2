@@ -2,6 +2,37 @@
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
+    queryInterface.bulkInsert('Categories', [
+      {
+        id: '1',
+        name: "Pants"
+      },
+      {
+        id: "2",
+        name: "Shirts"
+      },
+      {
+        id: "3",
+        name: "Accessories"
+      },
+      {
+        id: "4",
+        name: "Hats"
+      },
+      {
+        id: "5",
+        name: "Shoes"
+      },
+      {
+        id: "6",
+        name: "Bags"
+      },
+      {
+        id: "7",
+        name: "Dresses"
+      }
+    ], {});
+    
     queryInterface.bulkInsert('Users', [
       {
         id: '1',
@@ -61,74 +92,155 @@ module.exports = {
 
     return queryInterface.bulkInsert('Items', [
       {
-        brand: "Libratone",
-        name: 'Headphones',
-        category: 'Accessories',
-        purchaseUrl: 'https://www.amazon.com/Libratone-Wireless-Cancelling-Headphones-Stormy/dp/B01NAHRH9X',
-        photoUrl: 'Img/accessories1.jpg',
+        brand: "J. Crew",
+        name: 'Sutton straight-fit broken-in chino',
+        CategoryId: 1,
+        purchaseUrl: 'https://factory.jcrew.com/p/mens-clothing/pants/straight/sutton-straightfit-brokenin-chino/38648?sisearchengine=197&siproduct=38648&noPopUp=true&srccode=Paid_Search|Shopping|Google|PL_MPROD_BOTTOMSx_ACQ_XXX_EVG_COUSA_EN_EN_P_FACT_AW_CPC_PLA,Mens_Pants_x_XXX,PRODUCT%20GROUP,71700000033368390,58700003939892882,p33859185389&utm_source=Google&utm_medium=Paid_Search&utm_campaign=PL_MPROD_BOTTOMSx_ACQ_XXX_EVG_COUSA_EN_EN_P_FACT_AW_CPC_PLA,Mens_Pants_x_XXX&utm_content=Shopping&NoPopUp=True&gclid=CjwKCAjwzqPcBRAnEiwAzKRgSwqsApEV04LRtLEYIIh4ZUvjT5lGREYkMUmC54s5J3H2aSwPV1e8gxoC-tIQAvD_BwE&gclsrc=aw.ds',
+        photoUrl: 'Img/pants1.jpg',
+        price: 24.99,
         PostId: '1'
       },
       {
         brand: "Bella",
         name: 'Canvas Unisex Jersey 3/4 Sleeve Baseball Tee',
-        category: 'Shirts',
+        CategoryId: 2,
         purchaseUrl: 'https://www.amazon.com/Bella-Canvas-Unisex-Jersey-Baseball/dp/B014WBLVVE?th=1',
         photoUrl: 'Img/shirts1.jpg',
+        price: 14.99,
         PostId: '1'
       },
       {
-        brand: "IWC",
-        name: 'Watch',
-        category: 'Accessories',
-        purchaseUrl: 'https://www.iwc.com/us/en/home.html',
-        photoUrl: 'Img/accessories2.jpg',
+        brand: "Loaded Boards",
+        name: 'Tarab Longboard',
+        CategoryId: 3,
+        purchaseUrl: 'https://loadedboards.com/tarab-longboard-skateboard/',
+        photoUrl: 'Img/accessories1.jpg',
+        price: 426.00,
         PostId: '2'
       },
       {
-        brand: "Charlotte Tilbury",
-        name: 'Lipstick',
-        category: 'Accessories',
-        purchaseUrl: 'http://www.charlottetilbury.com/us/',
-        photoUrl: 'Img/accessories3.jpg',
-        PostId: '3'
+        brand: "FLUT Co.",
+        name: 'Wave Beanie',
+        CategoryId: 4,
+        price: 350.00,
+        purchaseUrl: 'https://www.flutstore.com/product-page/wave-beanie-1',
+        photoUrl: 'Img/hats1.jpg',
+        PostId: '2'
       },
       {
-        brand: "Calvin Klein",
-        name: 'Textured Marled Knit Jacquard Open-Front Jacket',
-        category: 'Jackets',
-        purchaseUrl: 'https://www.dillards.com/p/calvin-klein-textured-marled-knit-jacquard-open-front-jacket/508260427',
-        photoUrl: 'Img/suits1.jpg',
-        PostId: '3'
+        brand: "Adidas",
+        name: "Adidas Originals Men's Trefoil Crew Sweatshirt",
+        CategoryId: 2,
+        purchaseUrl: 'https://www.amazon.com/adidas-Originals-Outerwear-Trefoil-Sweatshirt/dp/B01N2MCC0P',
+        photoUrl: 'Img/shirts2.jpg',
+        price: 24.99,
+        PostId: '2'
       },
       {
-        brand: "Kendra Scott",
-        name: 'Elisa Pendant Necklace In Multi Color Drusy',
-        category: 'Accessories',
-        purchaseUrl: 'https://www.kendrascott.com/jewelry/categories/necklaces/elisa-silver-pendant-necklace-platinum-drusy/842177112380.html',
-        photoUrl: 'Img/accessories4.jpg',
+        brand: "Stylle",
+        name: 'Round Oversized Sunglasses',
+        CategoryId: 3,
+        purchaseUrl: 'https://www.amazon.com/Shiny-White-Frame-Grey-Black/dp/B01H2E5VO6',
+        photoUrl: 'Img/accessories6.jpg',
+        price: 10.99,
         PostId: '5'
       },
       {
-        brand: "Helzberg",
-        name: 'Diamond Infinity Ring 1/10 ct tw Round-Cut Sterling Silver',
-        category: 'Accessories',
-        purchaseUrl: 'https://www.helzberg.com/',
+        brand: "Aurora",
+        name: "Women's Metal Retro Casual Round Dial Quartz Analog Wrist Watch with Leather Band",
+        CategoryId: 3,
+        purchaseUrl: 'https://www.amazon.com/Aurora-Womens-Watch-Leather-Band-Rose/dp/B01DSU4BEY',
         photoUrl: 'Img/accessories5.jpg',
+        price: 18.99,
         PostId: '5'
       },
       {
-        brand: "Michael Kors",
-        name: 'Pink convertible bag',
-        category: 'Accessories',
-        purchaseUrl: 'https://www.michaelkors.com/',
+        brand: "Zara",
+        name: 'Buttoned jeans Z1975',
+        CategoryId: 1,
+        price: 49.90,
+        purchaseUrl: 'https://www.zara.com/us/en/buttoned-jeans-z1975-p06147160.html',
+        photoUrl: 'Img/pants2.jpg',
+        PostId: '5'
+      },
+      {
+        brand: "Jessica Simpson",
+        name: 'Teddi Ankle Boot (Model JS-TEDDI)',
+        CategoryId: 5,
+        price: 74.04,
+        purchaseUrl: 'https://  www.ebay.com/i/232909889932',
+        photoUrl: 'Img/shoes1.jpg',
+        PostId: '5'
+      },
+      {
+        brand: "Janey Jane",
+        name: 'Convertible Crossbody Backpack',
+        CategoryId: 6,
+        price: 31.99,
+        purchaseUrl: 'https://www.ebags.com/hproduct/ampere-creations/janey-jane-convertible-crossbody-backpack/295419',
         photoUrl: 'Img/bags1.jpg',
         PostId: '5'
+      },
+      {
+        brand: "Luulla",
+        name: 'Flowers Print Bodycon Tank Dress Flared Skirt',
+        CategoryId: 7,
+        price: 89.00,
+        purchaseUrl: 'https://www.luulla.com/product/248222/bright-colors-flowers-print-bodycon-tank-dress-flared-skirt-grxjy560988',
+        photoUrl: 'Img/dress1.jpg',
+        PostId: '3'
+      },
+      {
+        brand: "Khanomak",
+        name: 'Long Sleeve Zipper Detail Rib Fitted Jacket',
+        CategoryId: 2,
+        price: 25.00,
+        purchaseUrl: 'https://www.amazon.com/Khanomak-Sleeve-Zipper-Detail-Charcoal/dp/B076JLL15N',
+        photoUrl: 'Img/shirts3.jpg',
+        PostId: '3'
+      },
+      {
+        brand: "Ray-Ban",
+        name: '4340V Wayfarer',
+        CategoryId: 2,
+        price: 168.00,
+        purchaseUrl: 'https://www.glassesusa.com/neutrals-medium/ray-ban-4340v-wayfarer/44-p5511.html',
+        photoUrl: 'Img/accessories7.jpg',
+        PostId: '3'
+      },
+      {
+        brand: "PacSun",
+        name: 'Skinny Ripped Bandana Black Jeans',
+        CategoryId: 1,
+        price: 59.95,
+        purchaseUrl: 'https://www.pacsun.com/pacsun/skinny-ripped-bandana-black-jeans-0132454210146.html?dwvar_0132454210146_color=001&cgid=mens-denim-trend-destroyed#start=2',
+        photoUrl: 'Img/pants3.jpg',
+        PostId: '4'
+      },
+      {
+        brand: "H&M",
+        name: 'Cotton Jersey T-shirt - Black',
+        CategoryId: 2,
+        price: 11.99,
+        purchaseUrl: 'http://www2.hm.com/en_us/productpage.0705324001.html',
+        photoUrl: 'Img/shirts4.jpg',
+        PostId: '4'
+      },
+      {
+        brand: "Hollister",
+        name: 'Plaid Flannel Shirt',
+        CategoryId: 2,
+        price: 39.95,
+        purchaseUrl: 'https://www.hollisterco.com/shop/us/p/-11296819',
+        photoUrl: 'Img/shirts5.jpg',
+        PostId: '4'
       }
       
     ], {});
   },
 
   down: async (queryInterface, Sequelize) => {
+    await queryInterface.bulkDelete('Categories', null, {});
     await queryInterface.bulkDelete('Items', null, {});
     await queryInterface.bulkDelete('Posts', null, {});
     await queryInterface.bulkDelete('Users', null, {});

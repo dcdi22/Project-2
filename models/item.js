@@ -3,8 +3,8 @@ module.exports = function(sequelize, DataTypes) {
     brand: DataTypes.STRING,
     name: DataTypes.STRING,
     purchaseUrl: DataTypes.STRING,
-    category: DataTypes.STRING,
-    photoUrl: DataTypes.STRING
+    photoUrl: DataTypes.STRING,
+    price: DataTypes.FLOAT(9,2)
   });
 
   Item.associate = function(models) {
