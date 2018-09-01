@@ -4,7 +4,7 @@ module.exports = function(sequelize, DataTypes) {
     name: DataTypes.STRING,
     purchaseUrl: DataTypes.STRING,
     photoUrl: DataTypes.STRING,
-    price: DataTypes.FLOAT(9,2)
+    price: DataTypes.FLOAT(9, 2)
   });
 
   Item.associate = function(models) {
