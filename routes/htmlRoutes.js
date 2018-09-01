@@ -11,6 +11,36 @@ module.exports = function(app) {
     });
   });
 
+  // Load dash page
+  app.get("/feed", function(req, res) {
+    db.Example.findAll({}).then(function(dbExamples) {
+      res.render("dash", {
+        msg: "Welcome!",
+        examples: dbExamples
+      });
+    });
+  });
+
+  // Load new-user page
+  app.get("/new-user", function(req, res) {
+    db.Example.findAll({}).then(function(dbExamples) {
+      res.render("newAcc", {
+        msg: "Welcome!",
+        examples: dbExamples
+      });
+    });
+  });
+
+  // Load new-user page
+  app.get("/new-post", function(req, res) {
+    db.Example.findAll({}).then(function(dbExamples) {
+      res.render("post", {
+        msg: "Welcome!",
+        examples: dbExamples
+      });
+    });
+  });
+
   // Load example page and pass in an example by id
   app.get("/example/:id", function(req, res) {
     db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
