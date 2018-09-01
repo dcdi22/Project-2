@@ -95,7 +95,7 @@ module.exports = {
         brand: "J. Crew",
         name: 'Sutton straight-fit broken-in chino',
         CategoryId: 1,
-        purchaseUrl: 'https://factory.jcrew.com/p/mens-clothing/pants/straight/sutton-straightfit-brokenin-chino/38648?sisearchengine=197&siproduct=38648&noPopUp=true&srccode=Paid_Search|Shopping|Google|PL_MPROD_BOTTOMSx_ACQ_XXX_EVG_COUSA_EN_EN_P_FACT_AW_CPC_PLA,Mens_Pants_x_XXX,PRODUCT%20GROUP,71700000033368390,58700003939892882,p33859185389&utm_source=Google&utm_medium=Paid_Search&utm_campaign=PL_MPROD_BOTTOMSx_ACQ_XXX_EVG_COUSA_EN_EN_P_FACT_AW_CPC_PLA,Mens_Pants_x_XXX&utm_content=Shopping&NoPopUp=True&gclid=CjwKCAjwzqPcBRAnEiwAzKRgSwqsApEV04LRtLEYIIh4ZUvjT5lGREYkMUmC54s5J3H2aSwPV1e8gxoC-tIQAvD_BwE&gclsrc=aw.ds',
+        purchaseUrl: 'https://factory.jcrew.com/p/mens-clothing/pants/straight/sutton-straightfit-brokenin-chino/38648',
         photoUrl: 'Img/pants1.jpg',
         price: 24.99,
         PostId: '1'

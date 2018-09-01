@@ -5,3 +5,4 @@ To run the seeders, run this command in project folder:
 To undo the seeders: 
 
     node_modules/.bin/sequelize db:seed:undo:all
+    
