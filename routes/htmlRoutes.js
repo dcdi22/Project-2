@@ -5,10 +5,6 @@ module.exports = function(app) {
     res.render("index", {});
   });
 
-  app.get("/test", function(req, res) {
-    res.render("test", {});
-  });
-
   app.get("/browse/styles/all", function(req, res) {
     res.render("stylesFeed", {});
   });
