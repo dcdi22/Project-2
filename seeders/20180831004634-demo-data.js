@@ -67,36 +67,36 @@ module.exports = {
           id: "1",
           title: "Ballin on a budget",
           body: "I found this shirt at Goodwill. I saved so much money. I'm the best shopper ever",
-          photoUrl: "Img/style1.jpg",
+          photoUrl: "/Img/style1.jpg",
           UserId: "1"
         },
         {
           id: "2",
           title: "Fall Fresh",
           body: "My skate shop Wheel Bairo just got in these new hoodies and beanies. Stop by on Main Street!",
-          photoUrl: "Img/style2.jpg",
+          photoUrl: "/Img/style2.jpg",
           UserId: "2"
         },
         {
           id: "3",
           title: "Designer Life",
-          body: "I love the style clash of business and casual. The jacket used to be my little brothers!",
-          photoUrl: "Img/style3.jpg",
+          body: "I love the style clash of business and casual.",
+          photoUrl: "/Img/style3.jpg",
           UserId: "3"
         },
         {
           id: "4",
           title: "Simplicity is a virtue",
           body:
-            "Some people say wearing your shirt around your waste is lame, but anyone who thinks that is just a hater. Convenience over err'ything.",
-          photoUrl: "Img/style4.jpg",
+            "Some people say wearing your shirt around your waist is lame, but anyone who thinks that is just a hater. Convenience over err'ything.",
+          photoUrl: "/Img/style4.jpg",
           UserId: "4"
         },
         {
           id: "5",
           title: "Flowers not included",
           body: "Nicki Minaj 'Chun Li' haircut + brand new boots = a happy me",
-          photoUrl: "Img/style5.jpg",
+          photoUrl: "/Img/style5.jpg",
           UserId: "3"
         }
       ],
@@ -112,7 +112,7 @@ module.exports = {
           CategoryId: 1,
           purchaseUrl:
             "https://factory.jcrew.com/p/mens-clothing/pants/straight/sutton-straightfit-brokenin-chino/38648",
-          photoUrl: "Img/pants1.jpg",
+          photoUrl: "/Img/pants1.jpg",
           price: 24.99,
           PostId: "1"
         },
@@ -121,7 +121,7 @@ module.exports = {
           name: "Canvas Unisex Jersey 3/4 Sleeve Baseball Tee",
           CategoryId: 2,
           purchaseUrl: "https://www.amazon.com/Bella-Canvas-Unisex-Jersey-Baseball/dp/B014WBLVVE?th=1",
-          photoUrl: "Img/shirts1.jpg",
+          photoUrl: "/Img/shirts1.jpg",
           price: 14.99,
           PostId: "1"
         },
@@ -130,7 +130,7 @@ module.exports = {
           name: "Tarab Longboard",
           CategoryId: 3,
           purchaseUrl: "https://loadedboards.com/tarab-longboard-skateboard/",
-          photoUrl: "Img/accessories1.jpg",
+          photoUrl: "/Img/accessories1.jpg",
           price: 426,
           PostId: "2"
         },
@@ -140,7 +140,7 @@ module.exports = {
           CategoryId: 4,
           price: 350,
           purchaseUrl: "https://www.flutstore.com/product-page/wave-beanie-1",
-          photoUrl: "Img/hats1.jpg",
+          photoUrl: "/Img/hats1.jpg",
           PostId: "2"
         },
         {
@@ -148,7 +148,7 @@ module.exports = {
           name: "Adidas Originals Men's Trefoil Crew Sweatshirt",
           CategoryId: 2,
           purchaseUrl: "https://www.amazon.com/adidas-Originals-Outerwear-Trefoil-Sweatshirt/dp/B01N2MCC0P",
-          photoUrl: "Img/shirts2.jpg",
+          photoUrl: "/Img/shirts2.jpg",
           price: 24.99,
           PostId: "2"
         },
@@ -157,7 +157,7 @@ module.exports = {
           name: "Round Oversized Sunglasses",
           CategoryId: 3,
           purchaseUrl: "https://www.amazon.com/Shiny-White-Frame-Grey-Black/dp/B01H2E5VO6",
-          photoUrl: "Img/accessories6.jpg",
+          photoUrl: "/Img/accessories6.jpg",
           price: 10.99,
           PostId: "5"
         },
@@ -166,7 +166,7 @@ module.exports = {
           name: "Women's Metal Retro Casual Round Dial Quartz Analog Wrist Watch with Leather Band",
           CategoryId: 3,
           purchaseUrl: "https://www.amazon.com/Aurora-Womens-Watch-Leather-Band-Rose/dp/B01DSU4BEY",
-          photoUrl: "Img/accessories5.jpg",
+          photoUrl: "/Img/accessories5.jpg",
           price: 18.99,
           PostId: "5"
         },
@@ -176,7 +176,7 @@ module.exports = {
           CategoryId: 1,
           price: 49.9,
           purchaseUrl: "https://www.zara.com/us/en/buttoned-jeans-z1975-p06147160.html",
-          photoUrl: "Img/pants2.jpg",
+          photoUrl: "/Img/pants2.jpg",
           PostId: "5"
         },
         {
@@ -185,7 +185,7 @@ module.exports = {
           CategoryId: 5,
           price: 74.04,
           purchaseUrl: "https://  www.ebay.com/i/232909889932",
-          photoUrl: "Img/shoes1.jpg",
+          photoUrl: "/Img/shoes1.jpg",
           PostId: "5"
         },
         {
@@ -195,7 +195,7 @@ module.exports = {
           price: 31.99,
           purchaseUrl:
             "https://www.ebags.com/hproduct/ampere-creations/janey-jane-convertible-crossbody-backpack/295419",
-          photoUrl: "Img/bags1.jpg",
+          photoUrl: "/Img/bags1.jpg",
           PostId: "5"
         },
         {
@@ -205,7 +205,7 @@ module.exports = {
           price: 89,
           purchaseUrl:
             "https://www.luulla.com/product/248222/bright-colors-flowers-print-bodycon-tank-dress-flared-skirt-grxjy560988",
-          photoUrl: "Img/dress1.jpg",
+          photoUrl: "/Img/dress1.jpg",
           PostId: "3"
         },
         {
@@ -214,7 +214,7 @@ module.exports = {
           CategoryId: 2,
           price: 25,
           purchaseUrl: "https://www.amazon.com/Khanomak-Sleeve-Zipper-Detail-Charcoal/dp/B076JLL15N",
-          photoUrl: "Img/shirts3.jpg",
+          photoUrl: "/Img/shirts3.jpg",
           PostId: "3"
         },
         {
@@ -223,7 +223,7 @@ module.exports = {
           CategoryId: 2,
           price: 168,
           purchaseUrl: "https://www.glassesusa.com/neutrals-medium/ray-ban-4340v-wayfarer/44-p5511.html",
-          photoUrl: "Img/accessories7.jpg",
+          photoUrl: "/Img/accessories7.jpg",
           PostId: "3"
         },
         {
@@ -233,7 +233,7 @@ module.exports = {
           price: 59.95,
           purchaseUrl:
             "https://www.pacsun.com/pacsun/skinny-ripped-bandana-black-jeans-0132454210146.html?dwvar_0132454210146_color=001&cgid=mens-denim-trend-destroyed#start=2",
-          photoUrl: "Img/pants3.jpg",
+          photoUrl: "/Img/pants3.jpg",
           PostId: "4"
         },
         {
@@ -242,7 +242,7 @@ module.exports = {
           CategoryId: 2,
           price: 11.99,
           purchaseUrl: "http://www2.hm.com/en_us/productpage.0705324001.html",
-          photoUrl: "Img/shirts4.jpg",
+          photoUrl: "/Img/shirts4.jpg",
           PostId: "4"
         },
         {
@@ -251,7 +251,7 @@ module.exports = {
           CategoryId: 2,
           price: 39.95,
           purchaseUrl: "https://www.hollisterco.com/shop/us/p/-11296819",
-          photoUrl: "Img/shirts5.jpg",
+          photoUrl: "/Img/shirts5.jpg",
           PostId: "4"
         }
       ],

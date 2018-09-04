@@ -6,7 +6,19 @@ module.exports = function(app) {
   });
 
   app.get("/browse/styles/all", function(req, res) {
-    res.render("stylesFeed", {});
+    db.Post.findAll({
+      order: db.sequelize.literal("createdAt DESC"),
+      include: [
+        {
+          model: db.Item
+        }
+      ]
+    }).then(function(Posts) {
+      // res.json(Posts);
+      res.render("stylesFeed", {
+        posts: Posts
+      });
+    });
   });
 
   app.get("/browse/pieces/category/:category", function(req, res) {
