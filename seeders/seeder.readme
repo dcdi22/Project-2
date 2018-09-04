@@ -2,6 +2,6 @@ To run the seeders, run this command in project folder:
 
     node_modules/.bin/sequelize db:seed:all
 
-To undo the seeders (NOT WORKING DUE TO ESLINT ERRORS. Use MySQLWorkbench to drop/recreate db if needed): 
-
+To undo the seeders (clear all data from tables):  
+ 
     node_modules/.bin/sequelize db:seed:undo:all

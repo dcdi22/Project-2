@@ -1,2 +1,5 @@
 models/index.js
 node_modules
+
+# it doesn't like the arrow function used in 'down' section, but the code works
+seeders/20180831004634-demo-data.js
