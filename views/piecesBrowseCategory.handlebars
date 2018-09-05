@@ -7,6 +7,7 @@
     <div class="row">
         <div class="col s12 cards-container">
             <div class="card blue-grey darken-1">
+    
     <ul>
         <li><p>{{this.Items.brand}}</p></li>
         <li><p>{{this.Items.name}}</p></li>
@@ -14,65 +15,9 @@
         <li><img href="{{this.Items.photoUrl}}"/></li>
         <li><p>{{this.Items.price}}</p></li>
     </ul>
+   
             </div>
         </div>
     </div>
 </div>
-{{/each}}
-
-{{!-- <div class="container">
-    <div class="row">
-    <div class="col s6">
-        <div class="card">
-            <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator" href="{{this.Posts.photoUrl}}"/>
-            </div>
-            <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4">{{this.Posts.title}}<i class="material-icons right">more_vert</i></span>
-            <p>What do you think??</p>
-                <div class="card-action">
-                    <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">arrow_upward</i></a>
-                    <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">arrow_downward</i></a>
-                    <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">favorite_border</i></a>
-                    <a class="btn-floating btn-large waves-effect waves-light red"><i class="fas fa-hands"></i></a>
-                    <a class="btn-floating btn-large waves-effect waves-light red"><i class="fas fa-praying-hands"></i></a>
-                </div>
-            </div>
-
-                <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i>{{this.Posts.title}}</span>
-                <p>{{this.Posts.body}}</p>
-
-        </div>
-            </div>     
-        </div>
-                    
-    <div class="col s6">
-        <div class="card">
-            <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator" src="/Users/marcusprice/workspace/code/Project-2/public/Img/style12.jpg">
-            </div>
-            <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4">{{this.Posts.title}}<i class="material-icons right">more_vert</i></span>
-            </div>
-            <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i>{{this.Posts.title}}</span>
-            <p>Get My Items Below</p>
-        
-
-                {{!-- would need to find a way to reference the Post Id  --}}
-                   {{#each Items}}
-                    <ul>
-                        <li><p>{{this.Items.brand}}</p></li>
-                        <li><p>{{this.Items.name}}</p></li>
-                        <li><img href="{{this.Items.purchaseUrl}}"/></li>
-                        <li><img href="{{this.Items.photoUrl}}"/></li>
-                        <li><p>{{this.Items.price}}</p></li>
-                    </ul>
-                {{/each}}
-            </div>
-        </div>
-    </div>
-    </div>
-</div>
-{{/each}} --}}
+ {{/each}}
