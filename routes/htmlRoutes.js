@@ -24,8 +24,7 @@ module.exports = function(app) {
   app.get("/browse/pieces/category/:category", function(req, res) {
     db.Category.findAll({}).then(function(dbCategory) {
       res.render("piecesBrowseCategory", {
-        msg: "Welcome!",
-        examples: dbCategory
+        category: dbCategory
       });
     });
   });
