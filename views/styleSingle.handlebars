@@ -1,0 +1,29 @@
+  {{!-- Body Container --}}
+  <div class="container mainBody">
+
+    {{#each posts}}
+      <div class="row">
+        <!-- left side --> 
+        <div class="col s6">
+            <div class="post-title">{{title}}</div>
+            <div class="post-image-container">
+              <img src="{{photoUrl}}" class="post-image">
+            </div>
+            <div class="post-body">{{body}}</div>
+        </div>
+
+        <!-- right side --> 
+        <div class="col s6">
+          {{#each Items}}
+          <div class="card-panel">
+            <div>{{brand}}</div>
+            <div>{{name}}</div>
+            <div>{{purchaseUrl}}</div>
+            <div>{{price}}</div>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+    {{/each}}
+    
+  </div>

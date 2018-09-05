@@ -89,3 +89,11 @@ nav .brand-logo {
 .cardMain {
   cursor: pointer;
 }
+
+.post-title, .post-body {
+  text-align: center;
+}
+
+.post-image {
+  max-width: 100%;
+}

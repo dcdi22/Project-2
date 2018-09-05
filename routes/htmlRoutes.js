@@ -15,19 +15,38 @@ module.exports = function(app) {
         }
       ]
     }).then(function(Posts) {
-      // res.json(Posts);
       res.render("stylesFeed", {
         posts: Posts
       });
     });
   });
 
-  app.get("/browse/pieces/category/:category", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.render("piecesBrowseCategory", {
-        msg: "Welcome!",
-        examples: dbExamples
+  app.get("/browse/style/:id", function(req, res) {
+    db.Post.findAll({
+      where: {
+        id: req.params.id
+      },
+      order: db.sequelize.literal("createdAt DESC"),
+      include: [
+        {
+          model: db.Item
+        }
+      ]
+    }).then(function(Posts) {
+      // res.json(Posts);
+      res.render("styleSingle", {
+        posts: Posts
       });
+    });
+  });
+
+  app.get("/browse/pieces/category/:category", function(req, res) {
+    db.Category.findAll({}).then(function(dbCategory) {
+      res.json(dbCategory);
+      // res.render("piecesBrowseCategory", {
+      //   msg: "Welcome!",
+      //   examples: dbExamples
+      // });
     });
   });
 
