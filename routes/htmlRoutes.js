@@ -1,10 +1,64 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  // Load index page
   app.get("/", function(req, res) {
+    res.render("index", {});
+  });
+
+  app.get("/browse/styles/all", function(req, res) {
+    db.Post.findAll({
+      order: db.sequelize.literal("createdAt DESC"),
+      include: [
+        {
+          model: db.Item
+        }
+      ]
+    }).then(function(Posts) {
+      // res.json(Posts);
+      res.render("stylesFeed", {
+        posts: Posts
+      });
+    });
+  });
+
+  // app.get("/browse/pieces/category/:category", function(req, res) {
+  //   db.Example.findAll({}).then(function(dbExamples) {
+  //     res.render("piecesBrowseCategory", {
+  //       msg: "Welcome!",
+  //       examples: dbExamples
+  //     });
+  //   });
+  // });
+
+  // Adjustments to be made to GET route to GET all items from database based on cateogry selected // 
+
+  app.get("/browse/pieces/category/:category", function(req, res) {
+    db.Category.findAll({
+      // where: {
+      //   name: "shirts"
+      // }
+    }).then(function(dbCategory) { 
+      console.log("test")
+      res.json(dbCategory);
+      // res.render("piecesBrowseCategory", {
+      //   msg: "Welcome!",
+      //   examples: dbCategory
+      // });
+    });
+  });
+
+  app.get("/new/account", function(req, res) {
     db.Example.findAll({}).then(function(dbExamples) {
-      res.render("index", {
+      res.render("newAccount", {
+        msg: "Welcome!",
+        examples: dbExamples
+      });
+    });
+  });
+
+  app.get("/new/post", function(req, res) {
+    db.Example.findAll({}).then(function(dbExamples) {
+      res.render("newPost", {
         msg: "Welcome!",
         examples: dbExamples
       });

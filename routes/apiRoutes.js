@@ -13,6 +13,15 @@ module.exports = function(app) {
       });
   });
 
+  app.get("/browse/pieces/category/:category", function(req, res) {
+    db.Category.findAll({}).then(function(dbCategory) {
+      res.render("piecesBrowseCategory", {
+        msg: "Welcome!",
+        examples: dbCategory
+      });
+    });
+  });
+
   // Get all examples
   app.get("/api/examples", function(req, res) {
     db.Example.findAll({}).then(function(dbExamples) {
