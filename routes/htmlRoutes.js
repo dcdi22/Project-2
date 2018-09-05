@@ -23,6 +23,7 @@ module.exports = function(app) {
 
   app.get("/browse/pieces/category/:category", function(req, res) {
     db.Example.findAll({}).then(function(dbExamples) {
+      res.json(dbExamples);
       res.render("piecesBrowseCategory", {
         msg: "Welcome!",
         examples: dbExamples
