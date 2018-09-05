@@ -1,4 +1,5 @@
 var db = require("../models");
+var isLoggedIn = require("../middleware/isLoggedIn");
 
 module.exports = function(app) {
   app.get("/", function(req, res) {
@@ -58,7 +59,7 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/new/post", function(req, res) {
+  app.get("/new/post", isLoggedIn, function(req, res) {
     db.Example.findAll({}).then(function(dbExamples) {
       res.render("newPost", {
         msg: "Welcome!",
