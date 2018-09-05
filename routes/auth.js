@@ -3,11 +3,12 @@ module.exports = (app, passport) => {
   //     res.render("dashboard");
   //   });
 
-  //   app.get("/logout", (req, res) => {
-  //     req.session.destroy(function(err) {
-  //       res.redirect("/");
-  //     });
-  //   });
+  app.get("/logout", (req, res) => {
+    req.session.destroy(function(err) {
+      console.log("HELLO CAN YOU REACH ME");
+      res.redirect("/");
+    });
+  });
 
   //   app.get("/signin", (req, res) => {
   //     res.render("signin");
