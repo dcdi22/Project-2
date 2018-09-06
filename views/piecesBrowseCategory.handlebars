@@ -8,13 +8,13 @@
         <div class="col s12 cards-container">
             <div class="card blue-grey darken-1">
     
+    {{#each item}}
     <ul>
-        <li><p>{{this.name}}</p></li>
-        {{!-- <li><p>{{this.Items.name}}</p></li>
-        <li><img href="{{this.Items.purchaseUrl}}"/></li>
-        <li><img href="{{this.Items.photoUrl}}"/></li>
-        <li><p>{{this.Items.price}}</p></li> --}}
+        <li><p>{{category.item.brand}}</p></li>
+        <li><p>{{category.item.name}}</p></li>
+        <li><p>{{category.item.price}}</p></li>
     </ul>
+    {{/each}} 
    
             </div>
         </div>

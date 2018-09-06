@@ -22,9 +22,19 @@ module.exports = function(app) {
   });
 
   app.get("/browse/pieces/category/:category", function(req, res) {
-    db.Category.findAll({}).then(function(dbCategory) {
+    db.Category.findAll({
+      include: [
+        {
+          model: db.Item
+        }
+      ]
+      // where: {
+      //   id: req.params.id
+      // }
+    }).then(function(Category) {
+      res.json(Category);
       res.render("piecesBrowseCategory", {
-        category: dbCategory
+        category: Category
       });
     });
   });
