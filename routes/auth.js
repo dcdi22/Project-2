@@ -10,21 +10,6 @@ module.exports = (app, passport) => {
     });
   });
 
-  // app.get("/logout", (req, res) => {
-  //   req.session.destroy();
-  //   console.log("HELLLLOOOOOOOOOOOOO88888");
-  //   res.redirect("/");
-  // });
-
-  // app.get('/logout', function(req, res){
-  //   req.logout();
-  //   res.redirect('/');
-  // });
-
-  //   app.get("/signin", (req, res) => {
-  //     res.render("signin");
-  //   });
-
   app.post(
     "/signin",
     passport.authenticate("local-signin", {
