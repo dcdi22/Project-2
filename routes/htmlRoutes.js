@@ -27,12 +27,12 @@ module.exports = function(app) {
         {
           model: db.Item
         }
-      ]
-      // where: {
-      //   id: req.params.id
-      // }
+      ],
+      where: {
+        name: req.params.category
+      }
     }).then(function(Category) {
-      res.json(Category);
+      // res.json(Category);
       res.render("piecesBrowseCategory", {
         category: Category
       });
