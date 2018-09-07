@@ -107,8 +107,9 @@ nav .brand-logo {
 .text-center {
   text-align: center;
 }
-/* .hImage{
-  width: 200px;
-  height: 300px
-} */
+#category-image{
+  height: auto;
+  width: auto;
+}
+
 /* Styling for the Browse by Category Page*/

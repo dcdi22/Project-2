@@ -4,8 +4,7 @@ need to find a way to cross-reference the Post and Post ID so each post will hav
 a way to do it using handle bars --}} 
 
 {{#category}}
-
-<div class="container">
+<div class="container center">
     <h2 class='text-center'>{{name}}</h2>
     <div class="row">
         <div class="col cards-category">
@@ -16,13 +15,10 @@ a way to do it using handle bars --}}
                         <div class="content">
                             <img class="hImage" src="{{this.Items.photoUrl}}">
                             <span class="card-title"><em>{{this.Items.name}}</em></span>
-                            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because
-                            I require little markup to use effectively.
-                            </p>
                             <div class="Items">
                                 <p>Name: {{name}}</p>
                                 <p>Brand: {{brand}}</p>
-                                <p class="hImage"><img src="{{photoUrl}}"></p>
+                                <p class="hImage" id="category-image"><img src="{{photoUrl}}" width="500" height="600"></p>
                                 <p>Price: {{price}}</p>
                                 <a href="{{purchaseURL}}" target="_blank">{{name}}</a></p>
                             </div>
