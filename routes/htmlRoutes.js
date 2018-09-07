@@ -16,7 +16,8 @@ module.exports = function(app) {
       ]
     }).then(function(Posts) {
       res.render("stylesFeed", {
-        posts: Posts
+        posts: Posts,
+        user: req.user
       });
     });
   });
@@ -67,6 +68,22 @@ module.exports = function(app) {
       });
     });
   });
+
+  // app.get("/myposts", function(req, res) {
+  //   db.Post.findAll({
+  //     order: db.sequelize.literal("createdAt DESC"),
+  //     include: [
+  //       {
+  //         model: db.Item
+  //       }
+  //     ]
+  //   }).then(function(Posts) {
+  //     res.render("stylesFeed", {
+  //       posts: Posts,
+  //       user: req.user
+  //     });
+  //   });
+  // });
 
   // Load example page and pass in an example by id
   app.get("/example/:id", function(req, res) {

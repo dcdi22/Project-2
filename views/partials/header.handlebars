@@ -1,47 +1,41 @@
-  <ul id="styles" class="dropdown-content">
-    <li><a href="/browse/styles/all">Browse All</a></li>
-    <li class="divider"></li>
-    <li><a href="/browse/styles/popular">Browse Popular</a></li>
-  </ul>
-  <ul id="pieces" class="dropdown-content">
-    <li><a href="/browse/pieces/category/shirts">Shirts</a></li>
-    <li class="divider"></li>
-    <li><a href="/browse/pieces/category/pants">Pants</a></li>
-    <li class="divider"></li>
-    <li><a href="/browse/pieces/category/shoes">Shoes</a></li>
-    <li class="divider"></li>
-    <li><a href="/browse/pieces/category/hats">Hats</a></li>
-    <li class="divider"></li>
-    <li><a href="/browse/pieces/category/bags">Bags</a></li>
-    <li class="divider"></li>
-    <li><a href="/browse/pieces/category/dresses">Dresses</a></li>
-    <li class="divider"></li>
-    <li><a href="/browse/pieces/category/accessories">Accessories</a></li>
-  </ul>
-  <ul id="account" class="dropdown-content">
-    <li><a href="/new/post">Create Post</a></li>
-    <li class="divider"></li>
-    <!-- in Ice Box --> 
-      <!--
-      <li><a href="#TBD">My Posts</a></li>
-      <li class="divider"></li>
-      -->
-    <!-- in To do: --> 
-    <li><a href="/logout">Log Out</a></li>
-  </ul>
-  <!--Sidebar Dropdown-->
-  <ul id="account2" class="dropdown-content">
-    <li><a href="/new/post">Create Post</a></li>
-    <li class="divider"></li>
-    <!-- in Ice Box --> 
-      <!--
-      <li><a href="#TBD">My Posts</a></li>
-      <li class="divider"></li>
-      -->
-    <!-- in To do: --> 
-    <li><a href="/logout">Log Out</a></li>
-  </ul>
- <ul id="styles2" class="dropdown-content">
+<ul id="styles" class="dropdown-content">
+  <li><a href="/browse/styles/all">Browse All</a></li>
+  <li class="divider"></li>
+  <li><a href="/browse/styles/popular">Browse Popular</a></li>
+</ul>
+<ul id="pieces" class="dropdown-content">
+  <li><a href="/browse/pieces/category/shirts">Shirts</a></li>
+  <li class="divider"></li>
+  <li><a href="/browse/pieces/category/pants">Pants</a></li>
+  <li class="divider"></li>
+  <li><a href="/browse/pieces/category/shoes">Shoes</a></li>
+  <li class="divider"></li>
+  <li><a href="/browse/pieces/category/hats">Hats</a></li>
+  <li class="divider"></li>
+  <li><a href="/browse/pieces/category/bags">Bags</a></li>
+  <li class="divider"></li>
+  <li><a href="/browse/pieces/category/dresses">Dresses</a></li>
+  <li class="divider"></li>
+  <li><a href="/browse/pieces/category/accessories">Accessories</a></li>
+</ul>
+<ul id="account" class="dropdown-content">
+  <li><a href="/new/post">Create Post</a></li>
+  <li class="divider"></li>
+
+  <li><a href="#TBD">My Posts</a></li>
+  <li class="divider"></li>
+
+  <li><a href="/logout">Log Out</a></li>
+</ul>
+<!--Sidebar Dropdown-->
+<ul id="account2" class="dropdown-content">
+  <li><a href="/new/post">Create Post</a></li>
+  <li class="divider"></li>
+  <li><a href="#TBD">My Posts</a></li>
+  <li class="divider"></li>
+  <li><a href="/logout">Log Out</a></li>
+</ul>
+<ul id="styles2" class="dropdown-content">
   <li><a href="/browse/styles/all">Browse All</a></li>
   <li class="divider"></li>
   <li><a href="/browse/styles/popular">Browse Popular</a></li>
@@ -61,34 +55,38 @@
   <li class="divider"></li>
   <li><a href="/browse/pieces/category/accessories">Accessories</a></li>
 </ul>
-  <nav class="">
-    <div class="nav-wrapper">
-      <a href="/" class="brand-logo">Marcus's Logo</a>
-      <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li>
-          {{!-- Not using search for now --}}
-          {{!-- <div class="center row">
-            <div class="col s12 ">
-              
-              <div class="row" id="topbarsearch">
-                <div class="input-field col s6 s12 black-text">
-                  <i class="white-text material-icons prefix">search</i>
-                  <input type="text" placeholder="search" id="autocomplete-input" class="autocomplete white-text">
-                </div>
+<nav class="">
+  <div class="nav-wrapper">
+    <a href="/" class="brand-logo">Marcus's Logo</a>
+    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li>
+        {{!-- Not using search for now --}}
+        {{!-- <div class="center row">
+          <div class="col s12 ">
+
+            <div class="row" id="topbarsearch">
+              <div class="input-field col s6 s12 black-text">
+                <i class="white-text material-icons prefix">search</i>
+                <input type="text" placeholder="search" id="autocomplete-input" class="autocomplete white-text">
               </div>
             </div>
-          </div> --}}
-        </li>
-        <li><a class="dropdown-button" href="#!" data-activates="styles">Styles<i class="material-icons right">arrow_drop_down</i></a></li>
-        <li><a class="dropdown-button" href="#!" data-activates="pieces">Pieces<i class="material-icons right">arrow_drop_down</i></a></li>
-        <li><a class="dropdown-button" href="#!" data-activates="account">Account<i class="material-icons right">arrow_drop_down</i></a></li>
-      </ul>
-    </div>
-  </nav>
-  <ul class="side-nav" id="slide-out">
-    <li><a href="/browse/styles/all">Home</a></li>
-    <li><a class="dropdown-button" href="#!" data-activates="account2">Account<i class="material-icons right">arrow_drop_down</i></a></li>
-    <li><a class="dropdown-button" href="#!" data-activates="styles2">Styles<i class="material-icons right">arrow_drop_down</i></a></li>
-    <li><a class="dropdown-button" href="#!" data-activates="pieces2">Pieces<i class="material-icons right">arrow_drop_down</i></a></li>
-  </ul>
+          </div>
+        </div> --}}
+      </li>
+      <li><a class="dropdown-button" href="#!" data-activates="styles">Styles<i class="material-icons right">arrow_drop_down</i></a></li>
+      <li><a class="dropdown-button" href="#!" data-activates="pieces">Pieces<i class="material-icons right">arrow_drop_down</i></a></li>
+      <li><a class="dropdown-button" href="#!" data-activates="account">{{#if user.username}}
+    {{user.username}}
+  {{else}}
+    Account
+  {{/if}}<i class="material-icons right">arrow_drop_down</i></a></li>
+    </ul>
+  </div>
+</nav>
+<ul class="side-nav" id="slide-out">
+  <li><a href="/browse/styles/all">Home</a></li>
+  <li><a class="dropdown-button" href="#!" data-activates="account2">Account<i class="material-icons right">arrow_drop_down</i></a></li>
+  <li><a class="dropdown-button" href="#!" data-activates="styles2">Styles<i class="material-icons right">arrow_drop_down</i></a></li>
+  <li><a class="dropdown-button" href="#!" data-activates="pieces2">Pieces<i class="material-icons right">arrow_drop_down</i></a></li>
+</ul>
