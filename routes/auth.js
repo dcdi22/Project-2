@@ -10,10 +10,6 @@ module.exports = (app, passport) => {
     });
   });
 
-  //   app.get("/signin", (req, res) => {
-  //     res.render("signin");
-  //   });
-
   app.post(
     "/signin",
     passport.authenticate("local-signin", {

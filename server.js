@@ -33,8 +33,8 @@ app.use(passport.session());
 
 // Routes
 require("./routes/apiRoutes")(app);
-require("./routes/htmlRoutes")(app);
 require("./routes/auth")(app, passport);
+require("./routes/htmlRoutes")(app);
 require("./config/passport/passport")(passport, db.User);
 
 var syncOptions = { force: false };

@@ -1,29 +1,52 @@
-  {{!-- Body Container --}}
   <div class="container mainBody">
+    <div class="row">
+      <div class="col s12 cards-container">
 
-    {{#each posts}}
-      <div class="row">
-        <!-- left side --> 
-        <div class="col s6">
-            <div class="post-title">{{title}}</div>
-            <div class="post-image-container">
-              <img src="{{photoUrl}}" class="post-image">
-            </div>
-            <div class="post-body">{{body}}</div>
-        </div>
-
-        <!-- right side --> 
-        <div class="col s6">
-          {{#each Items}}
-          <div class="card-panel">
-            <div>{{brand}}</div>
-            <div>{{name}}</div>
-            <div>{{purchaseUrl}}</div>
-            <div>{{price}}</div>
+        {{#each posts}}
+          <div class="center-align">
+            <h3>{{title}}</h3>
           </div>
-          {{/each}}
-        </div>
+          <div class="card cardMain">
+            <div class="card-image">
+              <img id="productImg" src="{{photoUrl}}">
+            </div>
+            <div class="card-content">
+
+              <p class="small-quotation center-align" id="productBody">{{body}}</p>
+              <br>
+
+              <div>
+                <h6 class="center-align">Items in this post</h6>
+              </div>
+
+              <div class="divider"></div>
+
+              
+              <div class="row">
+                {{#each Items}}
+                  <div class="col s6 m4 l3">
+                    <div class="card">
+                      <div class="card-image">
+                        <img src="{{photoUrl}}">
+                      </div>
+                      <div class="card-content">
+                        <p class="card-title">{{brand}}</p>
+                        <p>{{name}}</p>
+                      </div>
+                      <div class="card-action price">
+                        <a href="{{purchaseUrl}}">${{price}}</a>
+                      </div>
+                    </div>
+                  </div>
+                {{/each}}
+              </div>
+            </div>
+            <div class="card-action">
+              <a class="waves-effect waves-light btn" href="/browse/styles/all"><i class="material-icons left">arrow_back</i>Back</a>
+            </div>
+          </div>
+        {{/each}}
+        
       </div>
-    {{/each}}
-    
+    </div>
   </div>
