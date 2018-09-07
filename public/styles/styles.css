@@ -97,3 +97,45 @@ nav .brand-logo {
 .post-image {
   max-width: 100%;
 }
+
+/* Browse all styles page */
+
+.card-action.price a:hover {
+  color: #2b9b90 !important;
+}
+
+.card-action.price a {
+  color: #2BBBAD !important;
+}
+
+/* source: https://www.kirstencassidy.com/css-fancy-quotes/ */ 
+.small-quotation{
+  font-size: 24px;
+  margin: 0 auto;
+  quotes: "\201C""\201D""\2018""\2019";
+  padding: 10px 20px;
+  line-height: 1.4;
+}
+
+.small-quotation:before {
+  content: open-quote;
+  display: inline;
+  height: 0;
+  line-height: 0;
+  left: -10px;
+  position: relative;
+  top: 30px;
+  color: #ccc;
+  font-size: 3em;
+}
+.small-quotation::after {
+  content: close-quote;
+  display: inline;
+  height: 0;
+  line-height: 0;
+  left: 10px;
+  position: relative;
+  top: 35px;
+  color: #ccc;
+  font-size: 3em;
+}
