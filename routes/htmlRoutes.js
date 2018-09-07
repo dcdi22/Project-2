@@ -21,6 +21,26 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/browse/style/:id", function(req, res) {
+    db.Post.findAll({
+      where: {
+        id: req.params.id
+      },
+      order: db.sequelize.literal("createdAt DESC"),
+      include: [
+        {
+          model: db.Item
+        }
+      ]
+    }).then(function(Posts) {
+      // res.json(Posts);
+      res.render("styleSingle", {
+        posts: Posts,
+        user: req.user
+      });
+    });
+  });
+
   app.get("/browse/pieces/category/:category", function(req, res) {
     db.Category.findAll({
       include: [

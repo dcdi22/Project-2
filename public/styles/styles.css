@@ -12,7 +12,9 @@ main {
 /* Font For Logo */
 .LogoFont,
 nav .brand-logo {
-  font-family: 'Oleo Script', cursive;
+  font-family: 'Brush Script MT', 'Brush Script Std', cursive;
+  font-size: 50px;
+  /* font-family: 'Oleo Script', cursive; */
 }
 
 nav .brand-logo {
@@ -73,30 +75,30 @@ nav .brand-logo {
 
 
 /* Styling for the Browse by Category Page*/
-.cards-container {
+.cards-category {
   -webkit-column-break-inside: avoid;
 }
-.cards-container .card {
+.cards-category .card {
   display: inline-block;
   overflow: visible;
 }
 
 @media only screen and (max-width : 600px) {
-  .cards-container {
+  .cards-category {
     -webkit-column-count: 1;
     -moz-column-count: 1;
     column-count: 1;
   }
 }
 @media only screen and (min-width : 601px) {
-  .cards-container {
+  .cards-category {
     -webkit-column-count: 2;
     -moz-column-count: 2;
     column-count: 2;
   }
 }
 @media only screen and (min-width : 993px) {
-  .cards-container {
+  .cards-category {
     -webkit-column-count: 3;
     -moz-column-count: 3;
     column-count: 3;
