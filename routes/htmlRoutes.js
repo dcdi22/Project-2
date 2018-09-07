@@ -3,7 +3,9 @@ var isLoggedIn = require("../middleware/isLoggedIn");
 
 module.exports = function(app) {
   app.get("/", function(req, res) {
-    res.render("index", {});
+    res.render("index", {
+      user: req.user
+    });
   });
 
   app.get("/browse/styles/all", function(req, res) {
@@ -36,7 +38,8 @@ module.exports = function(app) {
     }).then(function(Posts) {
       // res.json(Posts);
       res.render("styleSingle", {
-        posts: Posts
+        posts: Posts,
+        user: req.user
       });
     });
   });
@@ -54,15 +57,16 @@ module.exports = function(app) {
   app.get("/new/account", function(req, res) {
     db.Example.findAll({}).then(function(dbExamples) {
       res.render("newAccount", {
-        msg: "Welcome!",
-        examples: dbExamples
+        user: req.user
       });
     });
   });
 
   app.get("/new/post", isLoggedIn, function(req, res) {
     db.Example.findAll({}).then(function(dbExamples) {
-      res.render("newPost", {});
+      res.render("newPost", {
+        user: req.user
+      });
     });
   });
 
@@ -104,6 +108,8 @@ module.exports = function(app) {
 
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
-    res.render("404");
+    res.render("404", {
+      user: req.user
+    });
   });
 };
