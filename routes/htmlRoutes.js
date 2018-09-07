@@ -62,11 +62,23 @@ module.exports = function(app) {
   app.get("/new/post", isLoggedIn, function(req, res) {
     db.Example.findAll({}).then(function(dbExamples) {
       res.render("newPost", {
-        msg: "Welcome!",
-        examples: dbExamples
       });
     });
   });
+
+  app.post("/new/post", function(req, res) {
+    console.log("test");
+    db.Post.create({
+      title: req.body.title,
+      body: req.body.body,
+      photoUrl: req.body.photoUrl
+    })
+      .then(function(dbPost) {
+        res.json(dbPost);
+      });
+  });
+
+
 
   // Load example page and pass in an example by id
   app.get("/example/:id", function(req, res) {
