@@ -106,7 +106,7 @@ module.exports = function(app) {
   app.get("/myposts/:userid", function(req, res) {
     db.Post.findAll({
       where: {
-        userId: req.params.userid
+        id: req.user.id
       }
     }).then(function(Posts) {
       console.log(Posts);

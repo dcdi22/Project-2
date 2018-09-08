@@ -1,4 +1,29 @@
-// Getting jQuery references
+var container = $("body");
+
+container.on("click", "[name='clone']", clone);
+container.on("click", "[name='remove']", remove);
+
+ItemCounter = 0;
+
+function clone() {
+  var btn = $(this),
+    form = btn.closest("form"),
+    formHTML = form.html(),
+    forms = $("form").length;
+  $(".card-content").append("<form class='form'>" + formHTML + "</form>");
+  //re-initialize drop down menu
+  $(document).ready(function() {
+    $("select").material_select();
+  });
+}
+
+function remove() {
+  var btn = $(this),
+    form = btn.closest("form");
+  form.remove();
+}
+
+// Getting jQuery references to the post body, title, form, and category select
 var bodyInput = $("#postDescription");
 var titleInput = $("#postTitle");
 var photoUrl = $("#postPhoto");
