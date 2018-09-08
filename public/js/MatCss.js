@@ -14,11 +14,7 @@ $(document).ready(function() {
 
   $(".modal").modal();
 
-  $(document).ready(function() {
-    Materialize.updateTextFields();
-  });
+  Materialize.updateTextFields();
 
-  $(document).ready(function() {
-    $("select").material_select();
-  });
+  $("select").material_select();
 });

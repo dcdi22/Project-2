@@ -7,9 +7,9 @@
         <form class="col s12">
             <div class="row">
                 <div class="input-field col m3 s12">
-                  <i class="material-icons prefix">account_circle</i>
-                  <input id="user_name" type="text" class="validate">
-                  <label for="user_name">User</label>
+                    <i class="material-icons prefix">create</i>
+                  <input id="postTitle" type="text" class="validate">
+                  <label for="postTitle">Title</label>
                 </div>
             </div>
   
@@ -17,10 +17,10 @@
     <div class="row">
         
             <div class="row">
-                <div class="input-field col m3 s12">
+                <div class="input-field col m6 s12">
                     <i class="material-icons prefix">create</i>
-                  <input id="post_title" type="text" class="validate">
-                  <label for="post_title">Title</label>
+                  <textarea id="postDescription" class="materialize-textarea" data-length="220"></textarea>
+                  <label for="postDescription">Description</label>
                 </div>
             </div>
         
@@ -28,10 +28,11 @@
     <div class="row">
         
           <div class="row">
-            <div class="input-field col m4 s12">
-                    <i class="material-icons prefix">create</i>
-                    <textarea id="post_body" class="materialize-textarea" data-length="220"></textarea>
-                    <label for="post_body">Style Description</label>
+            <div class="input-field col m6 s12">
+                    <i class="material-icons prefix">add_a_photo</i>
+                    
+                    <input id="postPhoto" type="text" class="validate">
+                    <label for="postPhoto">Photo URL</label>
                   </div>
           </div>
         </form>
@@ -52,22 +53,32 @@
 </div>
 
 <div class="input-field col m3 s12">
-    <i class="material-icons prefix">attach_money</i>
+    <i class="material-icons prefix">create</i>
     <input id="brand_name" type="text" class="validate">
     <label for="brand_name">Brand</label>
 </div>
 
+<div class="input-field col m3 s12">
+    <i class="material-icons prefix">attach_money</i>
+    <input id="item_price" type="text" class="validate">
+    <label for="item_price">Price</label>
+</div>
+
 <div class="input-field col s12">
     <select>
-      <option value="" disabled selected>Choose your option</option>
-      <option value="1">Option 1</option>
-      <option value="2">Option 2</option>
-      <option value="3">Option 3</option>
+      <option value="" disabled selected>Choose item category</option>
+      <option value="1">Shirts</option>
+      <option value="2">Pants</option>
+      <option value="3">Shoes</option>
+      <option value="4">Hats</option>
+      <option value="5">Bags</option>
+      <option value="6">Dresses</option>
+      <option value="7">Accessories</option>
     </select>
     <label>Category Select</label>
   </div>
 
-<div class="file-field input-field">
+{{!-- <div class="file-field input-field">
       <div class="btn">
         <span>File</span>
         <input type="file">
@@ -75,12 +86,21 @@
       <div class="file-path-wrapper">
         <input class="file-path validate" type="text">
       </div>
-    </div> 
+    </div>  --}}
+
+    <div class="row">
+            <div class="input-field col m6 s12">
+                    <i class="material-icons prefix">add_a_photo</i>
+                    
+                    <input id="itemPhoto" type="text" class="validate">
+                    <label for="itemPhoto">Photo URL</label>
+                  </div>
+          </div>
 
 <div class="input-field col m3 s12">
     <i class="material-icons prefix">insert_link</i>
-    <input id="item_name" type="text" class="validate">
-    <label for="item_name">Purchase URL</label>
+    <input id="purchase_url" type="text" class="validate">
+    <label for="purchase_url">Purchase URL</label>
 </div>     
 
 <button class="waves-effect waves-light btn green" type="button" name="clone">Add Item</button>
@@ -90,9 +110,16 @@
 </div>
 </form>
 
+    <div class="fixed-action-btn">
+  <a class="btn-floating btn-large red">
+    <i id="cmsForm" class="large material-icons">add</i>
+  </a>
+  </div> 
+
 
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 crossorigin="anonymous"></script>
 <script src="/js/newPost.js"></script>
+<script src="/js/item.js"></script>
 <script src="/js/MatCss.js"></script>

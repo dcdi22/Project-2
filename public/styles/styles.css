@@ -39,8 +39,27 @@ nav .brand-logo {
   background-position: top;
 }
 
+.c1 {
+  background-image: url('../Img/style6.jpg');
+}
+.c2 {
+  background-image: url('../Img/style13.jpg');
+}
+.c3 {
+  background-image: url('../Img/style22.jpg');
+}
+.c4 {
+  background-image: url('../Img/style32.jpg');
+}
+.c5 {
+  background-image: url('../Img/style7.jpg');
+}
+.c6 {
+  background-image: url('../Img/style30.jpg');
+}
+
 /* Logo Shadow */
-.ugh {
+.logoShadow {
   text-shadow: 6px 3px 8px rgba(68, 68, 68, 0.76);
 }
 
@@ -72,7 +91,6 @@ nav .brand-logo {
 .cardMain {
   cursor: pointer;
 }
-
 
 /* Styling for the Browse by Category Page*/
 .cards-category {
@@ -119,3 +137,54 @@ nav .brand-logo {
 
 
 /* Styling for the Browse by Category Page*/
+
+.post-title, .post-body {
+  text-align: center;
+}
+
+.post-image {
+  max-width: 100%;
+}
+
+/* Browse all styles page */
+
+.card-action.price a:hover {
+  color: #2b9b90 !important;
+}
+
+.card-action.price a {
+  color: #2BBBAD !important;
+}
+
+/* source: https://www.kirstencassidy.com/css-fancy-quotes/ */ 
+.small-quotation{
+  font-size: 24px;
+  margin: 0 auto;
+  quotes: "\201C""\201D""\2018""\2019";
+  padding: 10px 20px;
+  line-height: 1.4;
+}
+
+.small-quotation:before {
+  content: open-quote;
+  display: inline;
+  height: 0;
+  line-height: 0;
+  left: -10px;
+  position: relative;
+  top: 30px;
+  color: #ccc;
+  font-size: 3em;
+}
+.small-quotation::after {
+  content: close-quote;
+  display: inline;
+  height: 0;
+  line-height: 0;
+  left: 10px;
+  position: relative;
+  top: 35px;
+  color: #ccc;
+  font-size: 3em;
+}
+
