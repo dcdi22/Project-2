@@ -220,7 +220,7 @@ module.exports = {
         {
           brand: "Ray-Ban",
           name: "4340V Wayfarer",
-          CategoryId: 2,
+          CategoryId: 3,
           price: 168,
           purchaseUrl: "https://www.glassesusa.com/neutrals-medium/ray-ban-4340v-wayfarer/44-p5511.html",
           photoUrl: "/Img/accessories7.jpg",

@@ -12,9 +12,9 @@ main {
 /* Font For Logo */
 .LogoFont,
 nav .brand-logo {
-  font-family: 'Brush Script MT', 'Brush Script Std', cursive;
-  font-size: 50px;
-  /* font-family: 'Oleo Script', cursive; */
+  /* font-family: 'Brush Script MT', 'Brush Script Std', cursive; */
+  font-size: 50;
+  font-family: 'Oleo Script', cursive;
 }
 
 nav .brand-logo {
