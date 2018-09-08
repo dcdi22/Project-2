@@ -102,6 +102,20 @@ module.exports = function(app) {
     });
   });
 
+  // My Posts page
+  app.get("/myposts/:userid", function(req, res) {
+    db.Post.findAll({
+      where: {
+        userId: req.params.userid
+      }
+    }).then(function(Posts) {
+      console.log(Posts);
+      res.render("myposts", {
+        posts: Posts
+      });
+    });
+  });
+
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404", {
