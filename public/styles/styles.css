@@ -12,6 +12,8 @@ main {
 /* Font For Logo */
 .LogoFont,
 nav .brand-logo {
+  /* font-family: 'Brush Script MT', 'Brush Script Std', cursive; */
+  font-size: 50;
   font-family: 'Oleo Script', cursive;
 }
 
@@ -90,6 +92,52 @@ nav .brand-logo {
   cursor: pointer;
 }
 
+/* Styling for the Browse by Category Page*/
+.cards-category {
+  -webkit-column-break-inside: avoid;
+}
+.cards-category .card {
+  display: inline-block;
+  overflow: visible;
+}
+
+@media only screen and (max-width : 600px) {
+  .cards-category {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+  }
+}
+@media only screen and (min-width : 601px) {
+  .cards-category {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+  }
+}
+@media only screen and (min-width : 993px) {
+  .cards-category {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+  }
+}
+.text-center {
+  text-align: center;
+}
+#category-image{
+  height: auto;
+  width: auto;
+}
+
+.content p {
+  font-size: 18.5px;
+}
+
+
+
+/* Styling for the Browse by Category Page*/
+
 .post-title, .post-body {
   text-align: center;
 }
@@ -139,3 +187,4 @@ nav .brand-logo {
   color: #ccc;
   font-size: 3em;
 }
+

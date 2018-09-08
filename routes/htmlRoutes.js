@@ -45,6 +45,24 @@ module.exports = function(app) {
   });
 
   app.get("/browse/pieces/category/:category", function(req, res) {
+    db.Category.findAll({
+      include: [
+        {
+          model: db.Item
+        }
+      ],
+      where: {
+        name: req.params.category
+      }
+    }).then(function(Category) {
+      // res.json(Category);
+      res.render("piecesBrowseCategory", {
+        category: Category
+      });
+    });
+  });
+
+  app.get("/browse/pieces/category/:category", function(req, res) {
     db.Category.findAll({}).then(function(dbCategory) {
       res.json(dbCategory);
       // res.render("piecesBrowseCategory", {

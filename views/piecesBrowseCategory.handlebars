@@ -1,0 +1,32 @@
+{{!-- will need to reseach/ask TA with regards to implementing handlebar or process to ensure that we are all pulling from
+one category at a time ie (looking to pull only from the Pants category. Additionally once pulling form that category will
+need to find a way to cross-reference the Post and Post ID so each post will have its respective items listed. Not sure of
+a way to do it using handle bars --}} 
+
+{{#category}}
+<div class="container center">
+    <h2 class='text-center'>{{name}}</h2>
+    <div class="row">
+        <div class="col cards-category">
+
+            {{#each Items}}
+                <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                        <div class="content">
+                            <img class="hImage" src="{{this.Items.photoUrl}}">
+                            <span class="card-title"><em>{{this.Items.name}}</em></span>
+                            <div class="Items">
+                                <p><strong><em>Item: {{name}}</strong></em></p>
+                                <p><strong><em>Brand: {{brand}}</strong></em></p>
+                                <p class="hImage" id="category-image"><img src="{{photoUrl}}" width="500" height="600"></p>
+                                <p><strong><em>Price: {{price}}</strong></em></p>
+                                <a href="{{purchaseUrl}}" target="_blank">{{name}}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {{/each}} 
+        </div>
+    </div>
+</div>
+{{/category}}
