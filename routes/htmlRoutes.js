@@ -81,21 +81,17 @@ module.exports = function(app) {
     });
   });
 
-  // app.get("/myposts", function(req, res) {
-  //   db.Post.findAll({
-  //     order: db.sequelize.literal("createdAt DESC"),
-  //     include: [
-  //       {
-  //         model: db.Item
-  //       }
-  //     ]
-  //   }).then(function(Posts) {
-  //     res.render("stylesFeed", {
-  //       posts: Posts,
-  //       user: req.user
-  //     });
-  //   });
-  // });
+  app.post("/new/item", function(req, res) {
+    db.Item.create({
+      brand: req.body.brandName,
+      name: req.body.itemName,
+      purchaseUrl: req.body.purchaseUrl,
+      photoUrl: req.body.itemPhoto,
+      price: req.body.itemPrice
+    }).then(function(dbItem) {
+      res.json(dbItem);
+    });
+  });
 
   // Load example page and pass in an example by id
   app.get("/example/:id", function(req, res) {
